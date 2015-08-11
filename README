@@ -5,7 +5,7 @@ Date:    August 11, 2015
 
 --------------------------------------------------------[    DESCRIPTION    ]--
 
-This is the first phase of remaking an old yahtzee game I made during 10th 
+This is the first phase of remaking an old Yahtzee game I made during 10th 
 grade in high school.  I wanted to use what I learned after a year at UCSD to
 make a much-improved version of the old game.  The goal of this phase was to
 make a largely similar version of the old game with much better underlying
@@ -14,8 +14,8 @@ have been the best way to code this particular game, however I learned a lot
 about object oriented programming at school so that is what I wanted to 
 practice.  I wanted to keep this version almost identical to the old version so
 the only difference would be the underlying code improvements.  I did, however,
-make a few improvements including: a resizeable window, a more aesthetically
-pleasing layout, and the ability to score after any roll (not just after the
+make a few improvements including: making the window resizable, improving the
+layout, and adding the ability to score after any roll (not just after the
 third roll).
 
 --------------------------------------------------------[    COMPILATION    ]--
@@ -29,3 +29,121 @@ To run this program after successfully compiling, enter the following on the
 command line within the directory containing the executable.
 
 	$ ./Yahtzee
+
+-------------------------------------------------------[ GAME  INSTRUCTIONS ]--
+
+Yahtzee Instructions (adapted from Hasbro's official Yahtzee Instructions)
+
+Object
+- Roll dice for scoring combinations, and get the highest total score.
+
+Game Summary
+- On each turn, roll the dice up to 3 times to get the highest scoring
+  combination for one of 13 categories.  After you finish rolling, you must
+  place a score or a zero in one of the 13 categories on the score card.  The
+  game ends when all the categories are filled.  Scores are totaled throughout
+  the game, including any bonus points.
+
+How to Play
+EACH ROUND
+- Each round you may roll the dice up to 3 times, although you may stop and 
+  score after your first or second roll.  To roll the dice, click the roll
+  button.
+
+- First roll:
+  > Click the roll button to automatically roll all 5 dice, regardless of 
+    whether some dice appear held or not.  Set any "keepers" aside by clicking
+    the corresponding hold buttons.  You may stop and score now, or roll again.
+
+- Second roll:
+  > Reroll ANY or ALL dice you want - even "keepers" from the previous roll.
+    You don't need to declare which combination you're rolling for; you may 
+    change your mind after any roll.  You may stop and score after your second
+    roll, or set aside any "keepers" and roll a third time.
+
+- Third and final roll:
+  > Reroll ANY or ALL dice you want.  After your third roll, you must fill in
+    a category on the score card with a score or a zero by clicking the 
+    corresponding score button.  After you click a score button, the round is
+    over.
+
+SCORING
+- When you are finished rolling, decide which category to fill in on the score
+  card.  For each game, there is a column of 13 score categories.  You must
+  fill a category during each round; if you can't (or don't want to) select a
+  score, you must select zero.  Select each category only once, in any order, 
+  depending on your best scoring option.
+
+- The score card is divided into an Upper Section and a Lower Section.  Scoring
+  combinations for each section are explained below.
+
+  Upper Section:		Score:
+	Ones			Total of ones only
+	Twos			Total of twos only
+	Threes			Total of threes only
+	Fours			Total of fours only
+	Fives			Total of fives only
+	Sixes			Total of sixes only
+
+- To score in the Upper Section, only the dice with the same number as the 
+  category are added for each corresponding category.  For example, if you roll
+  3 3 3 2 4, you could score 9 in the Threes category, 2 in the Twos category,
+  or 4 in the Fours category.
+
+- Your goal in the Upper Section is to score a total of at least 63 points to
+  earn a 35-point bonus.  The bonus points are based on scoring three of each
+  number (Ones through Sixes); however, you may earn the bonus with any 
+  combination of scores totaling 63 points or more.
+
+  Lower Section:		Score:
+	3 of a Kind		Total of all 5 dice
+	4 of a Kind		Total of all 5 dice
+	Full House		25 points
+	Small Straight		30 points
+	Large Straight		40 points
+	Yahtzee			50 points
+	Chance			Total of all 5 dice
+
+- Each of the Lower Section scoring combinations is explained below.
+
+- 3 of a Kind:
+  > Score in this category only if the dice include 3 or more of the same 
+    number.  For example, if you roll 5 5 5 2 1, you could score 18 points in
+    the 3 of a Kind category.
+
+- 4 of a Kind:
+  > Score in this category only if the dice include 4 or more of the same 
+    number.  For example, if you roll 2 2 2 2 6, you could score 14 points in
+    the 4 of a Kind category.
+
+- Full House:
+  > Score in this category only if the dice show three of one number and two of
+    another.  Any Full House is worth 25 points.  For example, if you roll
+    3 3 3 5 5, you could score 25 points in the Full House category.
+
+- Small Straight:
+  > Score in this category only if the dice show any sequence of four numbers.
+    Any Small Straight is worth 30 points.  You could score 30 points in the
+    Small Straight category if 4 out of the 5 dice are any of the following
+    combinations: 1 2 3 4, 2 3 4 5, or 3 4 5 6.
+
+- Large Straight:
+  > Score in this category only if the dice show any sequence of five numbers.
+    Any Large Straight is worth 40 points.  You could score 40 points in the 
+    Large Straight category with either of these two dice combinations:
+    1 2 3 4 5 or 2 3 4 5 6.
+
+- Yahtzee:
+  > Score in this category only if the dice show five of the same number (5 of
+    a kind).  Any Yahtzee is worth 50 points.  For example, if you roll 
+    4 4 4 4 4, you could score 50 points in the Yahtzee category.
+
+- Chance:
+  > Score the total of any 5 dice in this category.  This catch-all category 
+    comes in handy when you can't (or don't want to) score in another category,
+    and don't want to enter a zero.  For example, if you roll 1 4 5 6 6, you
+    could score 22 points in the Chance category.
+
+ENDING A GAME
+- Once you have filled all 13 score categories, the game is over.  The Grand
+  Total is your total score for the game.
