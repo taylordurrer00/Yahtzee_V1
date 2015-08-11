@@ -1,0 +1,31 @@
+--------------------------------------------------------[ YAHTZEE V1 README ]--
+
+Author:  Taylor Durrer
+Date:    August 11, 2015
+
+--------------------------------------------------------[    DESCRIPTION    ]--
+
+This is the first phase of remaking an old yahtzee game I made during 10th 
+grade in high school.  I wanted to use what I learned after a year at UCSD to
+make a much-improved version of the old game.  The goal of this phase was to
+make a largely similar version of the old game with much better underlying
+code.  This version is much more object-oriented and modular.  This may not
+have been the best way to code this particular game, however I learned a lot
+about object oriented programming at school so that is what I wanted to 
+practice.  I wanted to keep this version almost identical to the old version so
+the only difference would be the underlying code improvements.  I did, however,
+make a few improvements including: a resizeable window, a more aesthetically
+pleasing layout, and the ability to score after any roll (not just after the
+third roll).
+
+--------------------------------------------------------[    COMPILATION    ]--
+
+To compile this program, enter the following on the command line within the 
+directory containing the source files and Makefile:
+
+	$ make
+
+To run this program after successfully compiling, enter the following on the 
+command line within the directory containing the executable.
+
+	$ ./Yahtzee
