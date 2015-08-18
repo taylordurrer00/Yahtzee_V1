@@ -6,33 +6,33 @@
  * Date:         June 23, 2015                                               *
  * ------------------------------------------------------------------------- */
 
-import java.awt.event.*;    // For ActionListener (button clicks)
-import javax.swing.*;       // For JComponents (GUI)
+import java.awt.event.*;       // For ActionListener (button clicks)
+import javax.swing.*;          // For JComponents (GUI)
 import java.awt.Component;
-
+import java.net.URL;           // For loading images from jar file
 
 public class Dice implements ActionListener
 {
   // Default dice images
   private static final ImageIcon[ ] DICE_IMG =
   {
-    new ImageIcon( "DiceImages/OneDice.GIF" ),
-    new ImageIcon( "DiceImages/TwoDice.GIF" ),
-    new ImageIcon( "DiceImages/ThreeDice.GIF" ),
-    new ImageIcon( "DiceImages/FourDice.GIF" ),
-    new ImageIcon( "DiceImages/FiveDice.GIF" ),
-    new ImageIcon( "DiceImages/SixDice.GIF" )
+    loadImage( "OneDice.GIF" ),
+    loadImage( "TwoDice.GIF" ),
+    loadImage( "ThreeDice.GIF" ),
+    loadImage( "FourDice.GIF" ),
+    loadImage( "FiveDice.GIF" ),
+    loadImage( "SixDice.GIF" )
   };
 
   // Held dice images
   private static final ImageIcon[ ] DICE_IMG_HELD =
   {
-    new ImageIcon( "DiceImages/OneDiceHeld.GIF" ),
-    new ImageIcon( "DiceImages/TwoDiceHeld.GIF" ),
-    new ImageIcon( "DiceImages/ThreeDiceHeld.GIF" ),
-    new ImageIcon( "DiceImages/FourDiceHeld.GIF" ),
-    new ImageIcon( "DiceImages/FiveDiceHeld.GIF" ),
-    new ImageIcon( "DiceImages/SixDiceHeld.GIF" )
+    loadImage( "OneDiceHeld.GIF" ),
+    loadImage( "TwoDiceHeld.GIF" ),
+    loadImage( "ThreeDiceHeld.GIF" ),
+    loadImage( "FourDiceHeld.GIF" ),
+    loadImage( "FiveDiceHeld.GIF" ),
+    loadImage( "SixDiceHeld.GIF" )
   };
 
   // Amount of time to pause thread to make GUI more responsive
@@ -252,5 +252,23 @@ public class Dice implements ActionListener
     return "\nDice" +
            "\n    value:      " + value +
            "\n    hold:       " + hold;
+  }
+
+
+  /* ----------------------------------------------------------------------- *
+   * Function Name:  loadImage()
+   * Prototype:      private static ImageIcon loadImage( String name );
+   * Description:    Load the specified image from the jar file.
+   * Parameters:
+   *      arg 1:     String name -- File name of the image to load
+   * Return Value:   ImageIcon -- Image loaded from jar file
+   * ----------------------------------------------------------------------- */
+  private static ImageIcon loadImage( String name )
+  {
+    // Convert the path name into a URL
+    URL resource = Dice.class.getResource( name );
+
+    // Return the image
+    return new ImageIcon( resource );
   }
 }

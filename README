@@ -21,14 +21,17 @@ third roll).
 --------------------------------------------------------[    COMPILATION    ]--
 
 To compile this program, enter the following on the command line within the 
-directory containing the source files and Makefile:
+Yahtzee_V1 directory:
 
-	$ make
+	$ ant dist
 
 To run this program after successfully compiling, enter the following on the 
-command line within the directory containing the executable.
+command line within the Yahtzee_V1 directory.
 
-	$ ./Yahtzee
+	$ java -jar dist/Yahtzee_V1.jar
+
+Alternatively, locate the file named Yahtzee_V1.jar within Yahtzee_V1/dist/ and
+double-click the jar file to launch the game.
 
 -------------------------------------------------------[ GAME  INSTRUCTIONS ]--
 

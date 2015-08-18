@@ -1,0 +1,32 @@
+<project name="Yahtzee_V1" default="init" basedir=".">
+
+   <property name="src" location="src"/>
+   <property name="build" location="build"/>
+   <property name="dist" location="dist"/>
+   <property name="images" location="DiceImages"/>
+
+   <target name="init">
+      <mkdir dir="${build}"/>
+   </target>
+
+   <target name="compile" depends="init">
+      <javac srcdir="${src}" destdir="${build}"/>
+   </target>
+
+   <target name="dist" depends="compile">
+      <mkdir dir="${dist}"/>
+      <jar destfile="${dist}/Yahtzee_V1.jar">
+         <fileset dir="${build}" includes="*.class"/>
+         <fileset dir="${images}" includes="*.GIF"/>
+
+         <manifest>
+            <attribute name="Main-Class" value="Yahtzee"/>
+         </manifest>
+      </jar>
+   </target>
+
+   <target name="clean">
+      <delete dir="${build}"/>
+      <delete dir="${dist}"/>
+   </target>
+</project>
