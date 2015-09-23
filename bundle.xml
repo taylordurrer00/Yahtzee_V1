@@ -1,0 +1,16 @@
+<project name="Yahtzee_V1" default="bundle-yahtzee" basedir=".">
+
+   <taskdef name="bundleapp"
+            classname="com.oracle.appbundler.AppBundlerTask"
+            classpath="lib/appbundler-1.0.jar"/>
+
+   <target name="bundle-yahtzee">
+      <bundleapp outputdirectory="dist"
+         name="Yahtzee_V1"
+         displayname="Yahtzee"
+         identifier="Yahtzee"
+         mainclassname="Yahtzee">
+         <classpath file="dist/Yahtzee_V1.jar"/>
+      </bundleapp>
+   </target>
+</project>

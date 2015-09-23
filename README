@@ -5,7 +5,7 @@ Date:    August 11, 2015
 
 --------------------------------------------------------[    DESCRIPTION    ]--
 
-This is the first phase of remaking an old Yahtzee game I made during 10th 
+This is the first phase of remaking an old Yahtzee game I made during 11th 
 grade in high school.  I wanted to use what I learned after a year at UCSD to
 make a much-improved version of the old game.  The goal of this phase was to
 make a largely similar version of the old game with much better underlying
@@ -24,14 +24,16 @@ To compile this program, enter the following on the command line within the
 Yahtzee_V1 directory:
 
 	$ ant dist
+	$ ant -f bundle.xml
 
 To run this program after successfully compiling, enter the following on the 
 command line within the Yahtzee_V1 directory.
 
-	$ java -jar dist/Yahtzee_V1.jar
+	$ open -a Yahtzee_V1
 
-Alternatively, locate the file named Yahtzee_V1.jar within Yahtzee_V1/dist/ and
-double-click the jar file to launch the game.
+Alternatively, locate the file named Yahtzee_V1.app within Yahtzee_V1/dist/ and
+double-click the file to launch the game (depending on system settings, the 
+file may appear as Yahtzee_V1 instead of Yahtzee_V1.app).
 
 -------------------------------------------------------[ GAME  INSTRUCTIONS ]--
 
